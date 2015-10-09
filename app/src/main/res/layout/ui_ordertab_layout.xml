@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.app.views.custom_views.UIOrderTabView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/navigatorSize"
+    android:orientation="horizontal" >
+
+    <!--全部 -->
+
+    <RadioButton
+        android:id="@+id/radoTabAll"
+        style="@style/navigatorStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@color/themeBg"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:text="@string/order_tab_all" />
+
+    <!-- 代付款 -->
+    <RadioButton
+        android:id="@+id/radoNoPayment"
+        style="@style/navigatorStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@color/themeBg"
+        android:checked="true"
+        android:layout_weight="1"
+        android:text="@string/order_tab_nopayment" />
+
+    <!-- 待发货 -->
+    <RadioButton
+        android:id="@+id/radoNoDelivery"
+        style="@style/navigatorStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@color/themeBg"
+        android:layout_weight="1"
+        android:text="@string/order_tab_nodelivery" />
+
+
+
+    <!-- 待收货 -->
+    <RadioButton
+        android:id="@+id/radoNoReceived"
+        style="@style/navigatorStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@color/themeBg"
+        android:layout_weight="1"
+        android:text="@string/order_tab_noreceived" />
+
+    <!-- 已完成 -->
+    <RadioButton
+        android:id="@+id/radoCompleted"
+        style="@style/navigatorStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@color/themeBg"
+        android:layout_weight="1"
+        android:text="@string/order_tab_completed" />
+
+</com.app.views.custom_views.UIOrderTabView>

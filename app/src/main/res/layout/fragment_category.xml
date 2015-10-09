@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/themeBg"
+    android:orientation="vertical">
+
+    <com.app.views.custom_views.UITextView
+        style="@style/appTitleStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbarSize"
+        android:background="@color/primaryColor"
+        android:gravity="center"
+        android:text="@string/toolbar_category" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <fragment
+            android:id="@+id/categoryList"
+            android:name="com.tnw.fragments.CategoryListFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25" />
+
+        <fragment
+            android:id="@+id/categoryGrid"
+            android:name="com.tnw.fragments.CategoryGridFragment"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_height="match_parent"
+            android:layout_weight="0.75" />
+
+    </LinearLayout>
+
+</LinearLayout>

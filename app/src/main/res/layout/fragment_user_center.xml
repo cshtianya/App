@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ivHeaderBg"
+        android:layout_width="match_parent"
+        android:layout_height="136dp"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        fresco:backgroundImage="@mipmap/user_setting_header"
+        />
+
+    <android.support.v7.widget.Toolbar
+        style="@style/Toolbar"
+        android:background="@android:color/transparent"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actionbarSize"
+            android:clipChildren="false">
+
+            <ImageView
+                android:id="@+id/ivMsgNotice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_email_white_24dp" />
+
+            <ImageView
+                android:id="@+id/txtEdit"
+                style="@style/textPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/margin"
+                android:src="@mipmap/ic_mode_edit_white_24dp"
+                android:textColor="@color/textColor" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="136dp"
+        android:background="@color/themeBg"
+        android:clipChildren="false"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivCenterIcon"
+                android:layout_width="@dimen/faceSize"
+                android:layout_height="@dimen/faceSize"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="-48dp"
+                fresco:actualImageScaleType="fitXY"
+                fresco:placeholderImage="@mipmap/ic_launcher"
+                fresco:placeholderImageScaleType="fitXY"
+                fresco:roundAsCircle="true"
+                fresco:roundingBorderColor="@color/themeBg"
+                fresco:roundingBorderWidth="2dp" />
+
+            <com.app.views.custom_views.UITextView
+                android:id="@+id/txtNickName"
+                style="@style/textSecondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivCenterIcon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginBottom="@dimen/spacing"
+                android:textSize="@dimen/text_size_title" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:orientation="vertical">
+            <!-- 收藏、浏览记录 -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.app.views.custom_views.UITextView
+                    android:id="@+id/txtCollect"
+                    style="@style/textSecondary"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:padding="2dp"
+                    android:drawableTop="@mipmap/ic_collect_selected"
+                    android:background="@drawable/xml_view_selecter"
+                    android:drawablePadding="3dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="@string/cter_collect_store" />
+
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/divider" />
+
+                <com.app.views.custom_views.UITextView
+                    android:id="@+id/txtInter"
+                    style="@style/textSecondary"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:clickable="true"
+                    android:drawableTop="@mipmap/ic_jifen"
+                    android:background="@drawable/xml_view_selecter"
+                    android:drawablePadding="3dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="@string/cter_my_brand" />
+
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/divider" />
+
+                <com.app.views.custom_views.UITextView
+                    android:id="@+id/txtSign"
+                    style="@style/textSecondary"
+                    android:padding="2dp"
+                    android:gravity="center"
+                    android:drawableTop="@mipmap/ic_qiandao"
+                    android:drawablePadding="3dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:singleLine="true"
+                    android:text="@string/cter_my_trace" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layOrder"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/xml_view_selecter"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_dingdan" />
+
+                <com.app.views.custom_views.UITextView
+                    style="@style/textPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:singleLine="true"
+                    android:text="@string/cter_my_order" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layTicket"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/xml_view_selecter"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_youhuiquan" />
+
+                <com.app.views.custom_views.UITextView
+                    style="@style/textPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:singleLine="true"
+                    android:text="@string/cter_my_ticket" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layFavorite"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/xml_view_selecter"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_chongzhi" />
+
+                <com.app.views.custom_views.UITextView
+                    style="@style/textPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:singleLine="true"
+                    android:text="@string/cter_my_favorite" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/layAddress"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/xml_view_selecter"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_dizhiguanli" />
+
+                <com.app.views.custom_views.UITextView
+                    style="@style/textPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:singleLine="true"
+                    android:text="@string/cter_my_address" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layServerIntro"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/xml_view_selecter"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_dizhi" />
+
+                <com.app.views.custom_views.UITextView
+                    style="@style/textPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:singleLine="true"
+                    android:text="@string/cter_my_server_intro" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/laySetting"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/xml_view_selecter"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_shezhi" />
+
+                <com.app.views.custom_views.UITextView
+                    style="@style/textPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:singleLine="true"
+                    android:text="@string/cter_my_setting" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

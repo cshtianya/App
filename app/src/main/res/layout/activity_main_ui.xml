@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/navigatorView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navigatorSize"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        >
+
+        <include
+            android:id="@+id/tabView"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/navigatorSize"
+            layout="@layout/ui_tabview_layout" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/managerFrame"
+        android:layout_above="@id/navigatorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--android:clipToPadding="true"-->
+    <!--android:fitsSystemWindows="true"-->
+
+</RelativeLayout>
+
+

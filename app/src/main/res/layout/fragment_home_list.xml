@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.app.views.custom_views.ProgressBarIndeterminate
+        android:id="@+id/progressBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:background="@color/primaryColor" />
+
+    <com.github.ksoichiro.android.observablescrollview.ObservableListView
+        android:layout_above="@id/progressBar"
+        android:id="@+id/listView"
+        android:scrollbars="none"
+        android:fadingEdge="none"
+        android:dividerHeight="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar"
+        app:navigationIcon="@mipmap/logo"
+         />
+
+
+</RelativeLayout>

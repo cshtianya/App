@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/spacing"
+    android:paddingLeft="@dimen/spacing"
+    >
+
+    <ImageButton
+        android:id="@+id/btnReduce"
+        android:layout_width="@dimen/navigatorSize"
+        android:layout_height="@dimen/navigatorSize"
+        android:background="@drawable/xdetial_btn_bg"
+        android:src="@drawable/xdetial_minus_icon"
+        android:contentDescription="@string/app_name"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/txtCount"
+        android:layout_toRightOf="@id/btnReduce"
+        style="@style/textPrimary"
+        android:layout_width="72dip"
+        android:layout_height="@dimen/navigatorSize"
+        android:background="@drawable/input_text_bg"
+        android:gravity="center"
+        android:maxLength="6"
+        android:text="@string/sh_c_default_count" />
+
+    <ImageButton
+        android:id="@+id/btnAdd"
+        android:layout_toRightOf="@id/txtCount"
+        android:layout_width="@dimen/navigatorSize"
+        android:layout_height="@dimen/navigatorSize"
+        android:background="@drawable/xdetial_btn_bg"
+        android:src="@drawable/xdetial_plus_icon"
+        android:contentDescription="@string/app_name"
+        android:gravity="center" />
+
+</RelativeLayout>

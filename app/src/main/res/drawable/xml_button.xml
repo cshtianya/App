@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetBottom="0.0dp"
+    android:insetLeft="0.0dp"
+    android:insetRight="0.0dp" >
+
+    <selector>
+        <item android:state_pressed="true" android:state_enabled="true">
+            <shape>
+                <solid android:color="@color/primaryDark" />
+                <corners android:radius="0dip" />
+            </shape>
+        </item>
+
+        <item android:state_enabled="false">
+            <shape>
+                <solid android:color="@color/maskLayerColor" />
+
+                <corners android:radius="0dip" />
+
+            </shape>
+        </item>
+
+        <item>
+            <shape>
+
+                <solid android:color="@color/primaryColor" />
+
+                <corners android:radius="0dip" />
+            </shape>
+        </item>
+    </selector>
+
+</inset>

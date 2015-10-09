@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.app.views.UIPayCouponView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_below="@id/expListView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    
+	<RadioGroup android:id="@+id/rdgPayType"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbarSize"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:paddingLeft="@dimen/margin"
+        android:paddingRight="@dimen/margin"
+        android:background="@android:color/white"
+        >
+        
+        <RadioButton android:id="@+id/rdoAlipay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@drawable/radio_paytype_selector"
+            android:drawableLeft="@mipmap/zf_alipay_logo"
+            android:paddingLeft="40dp"
+            />
+        
+        
+        <RadioButton android:id="@+id/rdoWXPay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@drawable/radio_paytype_selector"
+            android:drawableLeft="@mipmap/zf_weixin_logo"
+            android:layout_marginLeft="@dimen/margin"
+            android:paddingLeft="40dp"
+
+
+            />
+        
+	</RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/rlayCoupon"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navigatorSize"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/margin"
+        android:paddingLeft="@dimen/margin"
+        android:paddingRight="@dimen/margin"
+        android:background="@android:color/white"
+        >
+
+        <TextView
+            android:id="@+id/txtCouponName"
+            style="@style/textPrimary"
+            android:singleLine="true"
+            android:hint="@string/coupon_use_hint"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtCouponPrice"
+            style="@style/appTitleStyle"
+            android:singleLine="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@mipmap/ic_go"
+            android:textColor="@color/promptColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+</com.app.views.UIPayCouponView>

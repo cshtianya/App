@@ -1,0 +1,209 @@
+<resources>
+    <string name="app_name">特农网</string>
+
+    <!-- 首页ToolBar资源配置 -->
+    <string name="toolbar_home">首页</string>
+    <string name="toolbar_category">分类</string>
+    <string name="toolbar_cart">购物车</string>
+    <string name="toolbar_account">我</string>
+    <string name="toolbar_more">设置</string>
+
+    <!-- 我的订单Tab资源配置-->
+    <string name="order_tab_all">全部</string>
+    <string name="order_tab_nopayment">待付款</string>
+    <string name="order_tab_nodelivery">待发货</string>
+    <string name="order_tab_noreceived">待收货</string>
+    <string name="order_tab_completed">已完成</string>
+
+
+    <!-- 我的优惠券Tab资源配置-->
+    <string name="coupon_tab_use">可使用</string>
+    <string name="coupon_tab_inuse">已使用</string>
+    <string name="coupon_tab_overdue">已过期</string>
+
+    <string name="exitApp">退出程序</string>
+    <string name="netNotAvailable">网络不可用</string>
+    <string name="noDate">暂无相关数据</string>
+    <string name="requestFail">请求数据失败，请刷新</string>
+    <string name="requestException">请求数据失败，请稍候再试</string>
+    <string name="strSearch">Search</string>
+
+    <string name="tip_delete_prompt">你确定要删除该信息吗？</string>
+
+    <!-- 登录/注册/找回密码 -->
+    <string name="hint_l_phone">手机号码</string>
+    <string name="hint_l_pwd">登录密码</string>
+    <string name="l_othertype_login">其他方式登录</string>
+    <string name="l_weixin_login">微信登录</string>
+    <string name="l_qq_login">QQ登录</string>
+    <string name="l_sina_login">新浪微博</string>
+    <string name="l_user_login">登 录</string>
+    <string name="l_user_regist">注 册</string>
+    <string name="l_user_submit">提 交</string>
+    <string name="l_forget_pwd">忘记密码？</string>
+    <string name="lr_title_retrieve_pwd">找回密码</string>
+    <string name="hint_lr_auth_code">验证码</string>
+    <string name="lr_send_auth_code">发送验证码信息</string>
+    <string name="lrg_title_user_regist">用户注册</string>
+    <string name="lrg_regist_phone">手机号码</string>
+    <string name="lrg_regist_get_v_code">获取验证码</string>
+    <string name="lrg_regist_autncode_empty">验证码不能为空</string>
+    <string name="lrg_regist_nickName">昵称  中文 英文或数字</string>
+    <string name="lrg_regist_pwd">密 码</string>
+    <string name="lrg_pitou_agreement">同意《特农网用户使用协议》</string>
+    <string name="p_l_phone_error">手机号码格式不正确</string>
+    <string name="p_l_pwd_short">密码不能少于6位</string>
+    <string name="p_lr_pwd_not_equal">两次密码不一致</string>
+    <string name="p_lr_repeat_new_pwd">请输入新密码</string>
+    <string name="p_lr_repeat_pwd">请重复输入密码</string>
+    <string name="t_opreate_fail">操作失败</string>
+
+    <!-- 购物车 -->
+    <string name="cart_all_select">&#160;&#160;全选</string>
+    <string name="cart_all_count">合计：￥</string>
+    <string name="no_server_const">不含运费</string>
+    <string name="cart_pay">结  算</string>
+
+
+    <!-- 设置 -->
+    <!--<string name="set_acount_manage">账号管理</string>-->
+    <string name="set_normal_settring">常 规</string>
+    <string name="more_version">版本检测</string>
+    <string name="more_images_cache">清理缓存</string>
+    <string name="set_support">支持我们</string>
+    <string name="set_about">关于</string>
+    <string name="set_about_us">关于我们</string>
+    <string name="set_server_port">服务协议</string>
+
+    <string name="more_ver_update">升 级</string>
+    <string name="more_login_account">登录账户</string>
+    <string name="more_exit_account">退出账户</string>
+
+    <!-- 收货地址管理 -->
+    <string name="c_delivery_info">收货信息</string>
+    <string name="tr_delivery_create">新 增</string>
+    <string name="tr_delivery_save">完 成</string>
+    <string name="c_click_select_address">请选择收货地址~</string>
+    <string name="c_delivery_titleName">收货地址</string>
+    <string name="c_delivery_default"> 设为默认</string>
+    <string name="c_delivery_isdefault">[默认]</string>
+    <string name="create_titleName">编辑收货地址</string>
+    <string name="create_receiver_name">收货人姓名</string>
+    <string name="create_select_are">点击选择所在区域</string>
+    <string name="create_phone_number">手机号码</string>
+    <string name="create_detial_address">街道详细地址</string>
+    <string name="create_post_code">邮编</string>
+    <string name="cre_vali_name_wrong">收货人不能为空</string>
+    <string name="cre_vali_zipcode_wrong">邮政编码输入不正确</string>
+
+    <!-- 商品收藏 -->
+    <string name="no_collect_record">没有收藏哦！</string>
+
+    <!-- 筛选 -->
+    <string name="sh_title_name">筛选</string>
+    <string name="sh_min_price">最低价格：</string>
+    <string name="sh_max_price">最高价格：</string>
+    <string name="sh_price_unit">元</string>
+    <string name="sh_c_title_name">购买商品</string>
+    <string name="sh_c_size">尺寸：</string>
+    <string name="sh_c_color">颜色：</string>
+    <string name="sh_c_count">数量：</string>
+    <string name="sh_c_default_count">1</string>
+    <string name="sh_c_buy_now">立即购买</string>
+    <string name="sh_c_inventory">库存：</string>
+
+    <!-- 我的账户 -->
+    <string name="cter_collect_store">我的收藏</string>
+    <string name="cter_my_brand">我的积分</string>
+    <string name="cter_my_trace">签 到</string>
+    <string name="cter_my_info">个人信息</string>
+    <string name="setting_modify_pwd">修改密码</string>
+    <string name="cter_my_order">我的订单</string>
+    <string name="cter_my_ticket">我的优惠券</string>
+    <string name="cter_my_favorite">充值</string>
+    <string name="cter_my_address">地址管理</string>
+    <string name="cter_my_server_intro">配送说明</string>
+    <string name="cter_my_setting">设置</string>
+    <string name="cter_my_feedback">意见反馈</string>
+    <string name="cter_my_user">用户中心</string>
+    <string name="cter_my_logout">退出登录</string>
+    <string name="cter_my_explain">配送说明</string>
+
+
+    <!-- 商品列表 -->
+    <string name="sg_sell_str_a">已售</string>
+    <string name="sg_sell_str_b">件</string>
+    <string name="sg_choose_goods_titleName">商品购买</string>
+
+    <!-- 商品详情 -->
+    <string name="product_detial_name">商品详情"</string>
+    <string name="product_intro">商品介绍</string>
+    <string name="product_comments">商品评论</string>
+    <string name="sg_d_nav_record">已售</string>
+    <string name="sg_db_buy_now">立刻购买</string>
+    <string name="sg_db_add_cart">加入购物车</string>
+    <string name="sg_db_add_collect">收藏</string>
+    <string name="sg_db_add_share">分享</string>
+
+    <!-- 评论/购买记录 -->
+    <string name="g_no_comments">暂无评论</string>
+    <string name="g_no_records">暂无记录</string>
+
+    <!-- 商品购买 -->
+    <string name="buy_comfirm_buy">确认购买</string>
+    <string name="buy_comfirm_add">确认添加</string>
+
+    <!-- 搜索 -->
+    <string name="search_nokey">请输入搜索内容</string>
+
+    <!-- 购物车 -->
+    <string name="dialog_title_prompt">修改商品数量</string>
+    <string name="tl_cart_stock_zore">购买数量不能小于 1 </string>
+    <string name="tl_cart_stock_prompt">您修改的数量超过库存数量</string>
+    <string name="hint_cart_buy_zero">请选择您要购买的商品</string>
+    <string name="cart_goods_standard">规格：</string>
+    <string name="cart_goods_price">单价：</string>
+    <string name="cart_goods_count">数量：</string>
+    <string name="cart_goods_sub_total">小计：</string>
+    <string name="cart_goods_sub_stock">库存不足</string>
+    <string name="cart_choose_count">已选</string>
+    <string name="cart_count_unit">件</string>
+    <string name="cart_goods_total">共</string>
+    <string name="cart_cart_total_price">总金额:</string>
+
+    <string name="coupon_use_hint">使用优惠券</string>
+
+    <!-- 订单确认 -->
+    <string name="order_list_titleName">订单确认</string>
+    <string name="order_cancel">取消订单</string>
+    <string name="order_submit">提交订单</string>
+    <string name="order_payway">请选择支付方式</string>
+    <string name="order_no_order">没有订单信息</string>
+    <string name="order_pw_payment">付  款</string>
+    <string name="order_dispatched">发货中</string>
+    <string name="order_deliver">签 收</string>
+    <string name="order_comment">评 论</string>
+    <string name="order_check_logistics">查看物流</string>
+    <string name="order_return_goods">申请退货</string>
+    <string name="order_refund">申请退款</string>
+    <string name="order_remind_deliver">提醒发货</string>
+    <string name="order_confirm_receipt">确认收货</string>
+
+    <!-- 订单详情 -->
+    <string name="order_d_titleName">订单详情 </string>
+    <string name="order_goods_info">商品信息</string>
+    <string name="order_seller_info">卖家信息</string>
+    <string name="order_order_info">订单信息</string>
+    <string name="oo_order_no">订单编号：</string>
+    <string name="oo_pay_no">交易号：</string>
+    <string name="oo_create_time">创建时间：</string>
+
+    <!-- 订单评论 -->
+    <string name="hint_o_commets">评论不超过250字</string>
+
+    <!-- 退货申请 -->
+    <string name="hint_o_return">请填写退货原因  不超过250字</string>
+
+    <string name="app_copy">Copyright@上海莱泽信息技术有限公司</string>
+
+</resources>

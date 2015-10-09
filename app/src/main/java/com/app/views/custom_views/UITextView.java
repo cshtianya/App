@@ -1,0 +1,45 @@
+package com.app.views.custom_views;
+
+import android.content.Context;
+import android.graphics.Typeface;
+import android.util.AttributeSet;
+import android.widget.TextView;
+
+/**
+ * Created by CSH on 2015/7/24 0024.
+ */
+public class UITextView extends TextView {
+
+    public UITextView(Context context) {
+
+        super(context);
+
+        if (!isInEditMode())
+            init(context);
+    }
+
+    public UITextView(Context context, AttributeSet attrs) {
+
+        super(context, attrs);
+
+        if (!isInEditMode())
+            init(context);
+    }
+
+    public UITextView(Context context, AttributeSet attrs, int defStyleAttr) {
+
+        super(context, attrs, defStyleAttr);
+
+        if (!isInEditMode())
+            init(context);
+
+    }
+
+    private void init(Context context) {
+
+        Typeface t = Typeface.createFromAsset(context.getAssets(), "Lobster-Regular.ttf");
+        this.setTypeface(t);
+
+    }
+
+}

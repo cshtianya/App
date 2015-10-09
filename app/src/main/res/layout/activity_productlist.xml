@@ -1,0 +1,75 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ivBandIamge"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/banner_height"
+        app:actualImageScaleType="fitXY"
+        app:placeholderImage="@mipmap/large_loading_img"
+        app:placeholderImageScaleType="center" />
+
+
+    <View
+        android:id="@+id/viewBg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/themeBg" />
+
+    <com.github.ksoichiro.android.observablescrollview.ObservableRecyclerView
+        android:id="@+id/recycler"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbarSize"
+        android:background="@mipmap/black_bg"
+        />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar"
+        app:title=""
+        android:background="@android:color/transparent"
+        app:navigationIcon="@mipmap/ic_back">
+
+        <TextView
+            style="@style/appTitleStyle"
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            />
+    </android.support.v7.widget.Toolbar>
+
+    <com.app.views.custom_views.ProgressBarIndeterminate
+        android:id="@+id/progressBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="bottom"
+        android:background="@color/primaryColor" />
+
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="@dimen/fabSize"
+        android:layout_height="@dimen/fabSize"
+        android:scaleType="center"
+        android:layout_gravity="top|left"
+        android:src="@mipmap/ic_collect_white_24dp"
+        app:fab_colorNormal="@color/accent"
+        app:fab_colorPressed="@color/accentDark" />
+
+</FrameLayout>
+

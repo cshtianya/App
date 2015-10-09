@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/faceSize"
+    android:paddingLeft="@dimen/spacing">
+
+    <View
+        style="@style/line"
+        android:layout_alignParentBottom="true" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/couponView"
+        android:layout_width="120dp"
+        android:layout_height="@dimen/faceSize"
+        android:layout_centerVertical="true"
+        fresco:actualImageScaleType="fitXY"
+        fresco:placeholderImage="@mipmap/large_loading_img"
+        fresco:placeholderImageScaleType="center"
+        />
+
+    <LinearLayout
+        android:id="@+id/layCouponRight"
+        android:layout_toRightOf="@id/couponView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:background="#ffffff"
+
+        >
+
+        <TextView
+            android:id="@+id/txtItemCouponName"
+            style="@style/textPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="10元优惠劵"
+            android:textSize="@dimen/text_size_title"
+            android:layout_marginLeft="5dp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/txtItemValidity"
+            style="@style/textPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="2015.09.01-2015.10.31有效"
+            android:textSize="@dimen/text_size_title"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/navigatorSize"
+    android:clickable="true"
+    >
+
+        <LinearLayout
+            android:id="@+id/layA"
+            android:background="@android:color/white"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txtSubPrice"
+                style="@style/appTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:textColor="@color/promptColor"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/ivExpandIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/collection_arrow_down" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@android:color/white"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/layA"
+            android:paddingLeft="@dimen/margin"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtItemName"
+                style="@style/appTitleStyle"
+                android:textColor="@color/textPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/app_name" />
+
+            <TextView
+                android:id="@+id/txtSubCount"
+                style="@style/textSecondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </LinearLayout>
+
+    <View
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        android:layout_alignParentBottom="true"
+       style="@style/line"/>
+
+</RelativeLayout>

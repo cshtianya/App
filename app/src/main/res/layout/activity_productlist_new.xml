@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/themeBg"
+    android:clipChildren="false">
+
+    <com.app.views.custom_views.UITextView
+        android:id="@+id/txtBandStore"
+        style="@style/textPrimary"
+        android:text="这里是介绍 DESC"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/spacing" />
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ivBandIamge"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/banner_height"
+        app:actualImageScaleType="fitXY"
+        app:placeholderImage="@mipmap/large_loading_img"
+        app:placeholderImageScaleType="center" />
+
+    <com.github.ksoichiro.android.observablescrollview.TouchInterceptionFrameLayout
+        android:id="@+id/scroll_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/themeBg"
+        android:clipChildren="false">
+
+        <com.github.ksoichiro.android.observablescrollview.ObservableRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginTop="@dimen/header_bar_height" />
+
+        <FrameLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false">
+
+            <View
+                android:id="@+id/header_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/header_bar_height"
+                android:background="@color/primaryColor"
+                android:minHeight="@dimen/header_bar_height" />
+
+
+            <LinearLayout
+                android:id="@+id/header_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/header_bar_height"
+                android:minHeight="@dimen/header_bar_height"
+                android:orientation="vertical">
+
+                <com.app.views.custom_views.UITextView
+                    android:id="@+id/title"
+                    style="@style/appTitleStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/actionbarSize"
+                    android:paddingLeft="@dimen/actionbarSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/header_overlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/header_flexible_space"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/primaryColor" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sliding_overlay_blur_size"
+                    android:background="@drawable/sliding_header_overlay"
+                    android:minHeight="@dimen/sliding_overlay_blur_size" />
+            </LinearLayout>
+
+            <com.melnykov.fab.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="@dimen/fabSize"
+                android:layout_height="@dimen/fabSize"
+                android:scaleType="center"
+                android:src="@mipmap/ic_collect_white_24dp"
+                app:fab_colorNormal="@color/accent"
+                app:fab_colorPressed="@color/accentDark" />
+
+        </FrameLayout>
+
+    </com.github.ksoichiro.android.observablescrollview.TouchInterceptionFrameLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar"
+        app:title=""
+        app:navigationIcon="@mipmap/ic_back">
+
+        <com.app.views.custom_views.UITextView
+            android:id="@+id/toolbar_title"
+            style="@style/appTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <com.app.views.custom_views.ProgressBarIndeterminate
+        android:id="@+id/progressBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/primaryColor"
+        android:visibility="gone" />
+
+</FrameLayout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/themeBg"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primaryColor"
+        />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@android:color/transparent"
+        style="@style/Toolbar"
+        app:title=""
+        app:navigationIcon="@mipmap/ic_back"
+        >
+
+        <TextView
+            style="@style/appTitleStyle"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/l_user_regist" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/banner_height"
+        android:clipChildren="false"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="@dimen/secondaryIconSize"
+            android:src="@mipmap/account_bottom_line"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/secondaryIconSize"
+            android:background="@color/themeBg"
+            android:paddingLeft="@dimen/spacing"
+            android:paddingTop="@dimen/spacing"
+            android:paddingBottom="@dimen/spacing"
+            android:paddingRight="@dimen/margin"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <com.app.views.button.CircularProgressButton
+                        android:id="@+id/btnAuthCode"
+                        style="@style/buttonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/buttonSize"
+                        android:layout_alignParentRight="true"
+                        android:paddingLeft="@dimen/margin"
+                        android:paddingRight="@dimen/margin"
+                        android:layout_marginLeft="@dimen/margin"
+                        app:cpb_cornerRadius="@dimen/radiusCirular"
+                        app:cpb_iconComplete="@mipmap/ic_done_white_24dp"
+                        app:cpb_textIdle="@string/lrg_regist_get_v_code"
+                        app:cpb_textError="@string/t_opreate_fail"
+                        />
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/etxtUserName"
+                        android:layout_toLeftOf="@id/btnAuthCode"
+                        style="@style/appEditTextStyle"
+                        android:inputType="phone"
+                        android:maxLength="18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lrg_regist_phone"
+                        android:textCursorDrawable="@drawable/text_cursor_cyan"
+                        app:met_iconLeft="@mipmap/ic_account_box_white_24dp"
+                        app:met_clearButton="true"
+                        app:met_floatingLabel="normal"
+                        app:met_maxCharacters="11"
+                        app:met_singleLineEllipsis="true"
+                        app:met_baseColor="@color/textPrimary"
+                        app:met_primaryColor="@color/primaryColor"
+                        />
+
+                </RelativeLayout>
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/etxtUserPwd"
+                    style="@style/appEditTextStyle"
+                    android:inputType="textVisiblePassword"
+                    android:maxLength="18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/lrg_regist_pwd"
+                    android:textCursorDrawable="@drawable/text_cursor_cyan"
+                    app:met_iconLeft="@mipmap/ic_lock_open_white_24dp"
+                    app:met_clearButton="true"
+                    app:met_floatingLabel="normal"
+                    app:met_maxCharacters="16"
+                    app:met_baseColor="@color/textPrimary"
+                    app:met_primaryColor="@color/primaryColor"
+                    />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/etxtAuthCode"
+                    style="@style/appEditTextStyle"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_lr_auth_code"
+                    android:textCursorDrawable="@drawable/text_cursor_cyan"
+                    app:met_iconLeft="@mipmap/ic_verified_user_white_24dp"
+                    app:met_clearButton="true"
+                    app:met_floatingLabel="normal"
+                    app:met_maxCharacters="6"
+                    app:met_baseColor="@color/textPrimary"
+                    app:met_primaryColor="@color/primaryColor"
+                    />
+
+
+            </LinearLayout>
+
+
+            <CheckBox
+                android:id="@+id/ckAgreement"
+                style="@style/textSecondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:checked="true"
+                android:background="@mipmap/transparent"
+                android:singleLine="true"
+                android:layout_marginLeft="@dimen/spacing"
+                android:text="@string/lrg_pitou_agreement" />
+
+
+            <com.app.views.button.CircularProgressButton
+                android:id="@+id/btnRegist"
+                style="@style/buttonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/buttonSize"
+                android:layout_marginLeft="@dimen/spacing"
+                android:layout_marginRight="@dimen/spacing"
+                android:layout_marginTop="@dimen/spacing"
+                app:cpb_cornerRadius="@dimen/radiusCirular"
+                app:cpb_iconComplete="@mipmap/ic_done_white_24dp"
+                app:cpb_textIdle="@string/l_user_regist"
+                app:cpb_textError="@string/t_opreate_fail"
+                />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

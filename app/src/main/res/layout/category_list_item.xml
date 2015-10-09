@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="62dp"
+    android:background="@android:color/white"
+    android:orientation="horizontal"
+    >
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="6dp"
+        android:layout_height="match_parent"
+        android:background="@color/promptColor" />
+
+    <com.app.views.custom_views.UITextView
+        android:id="@+id/txtItemName"
+        style="@style/textPrimary"
+        android:layout_toRightOf="@id/line"
+        android:text="@string/app_name"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        />
+
+    <View
+        style="@style/line"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

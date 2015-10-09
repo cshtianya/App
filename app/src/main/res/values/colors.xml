@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--黑色：[87% 普通文字] [54% 减淡文字] [26% 禁用状态/提示文字] [12% 分隔线]-->
+    <!--白色：[100% 普通文字] [70% 减淡文字] [30% 禁用状态/提示文字] [12% 分隔线]-->
+
+    <!--主题以及主要背景色 -->
+    <color name="themeBg">#F2F2F2</color>
+    <!--控件状态颜色-->
+    <color name="enabledColor">#00F7F7F7</color>
+    <color name="disableColor">#33CCCCCC</color>
+    <color name="pressedColor">#90CCCCCC</color>
+
+    <color name="pressedColor1">#00CCCCCC</color>
+
+    <!--主要颜色-->
+    <color name="primaryColor">#36801c</color>
+    <color name="primaryDark">#16801c</color>
+    <color name="primaryLight">#66902c</color>
+
+    <!--强调色 浮动按钮-->
+    <color name="accent">#FF4081</color>
+    <color name="accentDark">#C2185B</color>
+    <color name="accentLight">#F8BBD0</color>
+    <!--提示字体与线条颜色-->
+    <color name="divider">#AACCCCCC</color>
+    <color name="hintColor">#99009688</color>
+
+    <!--主要颜色-->
+    <!--<color name="primaryColor">#607D8B</color>-->
+    <!--<color name="primaryDark">#455A64</color>-->
+    <!--<color name="primaryLight">#CFD8DC</color>-->
+    <!--强调色 浮动按钮-->
+    <!--<color name="accent">#FF5252</color>-->
+    <!--<color name="accentDark">#D32F2F</color>-->
+    <!--<color name="accentLight">#F44336</color>-->
+    <!--&lt;!&ndash;提示字体与线条颜色&ndash;&gt;-->
+    <!--<color name="divider">#AACCCCCC</color>-->
+    <!--<color name="hintColor">#99607D8B</color>-->
+
+    <!--文本颜色-->
+    <color name="textColor">#FFFFFF</color>
+    <color name="textPrimary">#212121</color>
+    <color name="textSecondary">#727272</color>
+    <color name="textDisableColor">#55212121</color>
+    <!--提示警醒色-->
+    <color name="promptColor">#FFFF5252</color>
+    <color name="promptDark">#FFCD3A3A</color>
+    <color name="promptLight">#FFFF4444</color>
+    <!--覆盖图层-->
+    <color name="maskLayerColor">#70000000</color>
+
+
+</resources>

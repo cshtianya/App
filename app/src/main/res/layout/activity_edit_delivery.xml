@@ -1,0 +1,158 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/themeBg"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar"
+        app:title=""
+        app:navigationIcon="@mipmap/ic_back"
+        >
+
+        <TextView
+            style="@style/appTitleStyle"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_titleName" />
+
+        <TextView
+            android:id="@+id/txtFinish"
+            style="@style/appTitleStyle"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="@dimen/spacing"
+            android:paddingLeft="@dimen/margin"
+            android:text="@string/tr_delivery_save" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="@dimen/spacing"
+        >
+
+        <TextView
+            android:id="@+id/txtSelectAre"
+            style="@style/appTitleStyle"
+            android:clickable="true"
+            android:background="@drawable/xml_view_selecter"
+            android:textColorHint="@color/promptColor"
+            android:layout_width="match_parent"
+            android:drawableRight="@mipmap/ic_go"
+            android:textColor="@color/textPrimary"
+            android:paddingLeft="@dimen/spacing"
+            android:layout_height="@dimen/actionbarSize"
+            android:gravity="center_vertical"
+            android:hint="@string/create_select_are"
+            />
+
+        <View style="@style/line"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/etxtAddress"
+            style="@style/appEditTextStyle"
+            android:textSize="@dimen/text_size_title"
+            android:layout_marginTop="@dimen/margin"
+            android:maxLength="50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/create_detial_address"
+            android:textCursorDrawable="@drawable/text_cursor_cyan"
+            app:met_iconLeft="@mipmap/ic_account_box_white_24dp"
+            app:met_floatingLabel="normal"
+            app:met_maxCharacters="50"
+            app:met_clearButton="true"
+            app:met_baseColor="@color/textPrimary"
+            app:met_primaryColor="@color/primaryColor"
+            app:met_singleLineEllipsis="true" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/etxtReciverName"
+            style="@style/appEditTextStyle"
+            android:textSize="@dimen/text_size_title"
+            android:maxLength="30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/create_receiver_name"
+            android:textCursorDrawable="@drawable/text_cursor_cyan"
+            app:met_iconLeft="@mipmap/ic_account_box_white_24dp"
+            app:met_floatingLabel="normal"
+            app:met_maxCharacters="30"
+            app:met_clearButton="true"
+            app:met_baseColor="@color/textPrimary"
+            app:met_primaryColor="@color/primaryColor"
+            app:met_singleLineEllipsis="true" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/etxtPhone"
+            style="@style/appEditTextStyle"
+            android:textSize="@dimen/text_size_title"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/create_phone_number"
+            android:textCursorDrawable="@drawable/text_cursor_cyan"
+            app:met_iconLeft="@mipmap/ic_account_box_white_24dp"
+            app:met_floatingLabel="normal"
+            app:met_maxCharacters="11"
+            app:met_clearButton="true"
+            app:met_baseColor="@color/textPrimary"
+            app:met_primaryColor="@color/primaryColor"
+            app:met_singleLineEllipsis="true" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/etxtPostCode"
+            style="@style/appEditTextStyle"
+            android:textSize="@dimen/text_size_title"
+            android:inputType="phone"
+            android:maxLength="6"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/create_post_code"
+            android:textCursorDrawable="@drawable/text_cursor_cyan"
+            app:met_iconLeft="@mipmap/ic_account_box_white_24dp"
+            app:met_floatingLabel="normal"
+            app:met_maxCharacters="6"
+            app:met_clearButton="true"
+            app:met_baseColor="@color/textPrimary"
+            app:met_primaryColor="@color/primaryColor"
+            app:met_singleLineEllipsis="true" />
+
+        <CheckBox
+            android:id="@+id/ckSetDefault"
+            android:button="@null"
+            style="@style/appTitleStyle"
+            android:text="@string/c_delivery_default"
+            android:layout_marginTop="@dimen/spacing"
+            android:paddingLeft="@dimen/spacing"
+            android:textColor="@color/textPrimary"
+            android:drawableRight="@drawable/xml_sw_check_icon"
+            android:layout_width="match_parent"
+            android:background="@android:color/transparent"
+            android:layout_height="@dimen/navigatorSize" />
+
+    </LinearLayout>
+
+
+    <com.app.views.UIBottomPopupView
+        android:id="@+id/uiPopupView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        />
+
+
+</RelativeLayout>
+
+

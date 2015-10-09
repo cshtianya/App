@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/layLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/navigatorSize"
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_margin="6dp"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/app_progressbar" />
+
+
+        <LinearLayout
+            android:id="@+id/layCancelView"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/navigatorSize"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="@dimen/navigatorSize"
+                android:layout_gravity="center_vertical"
+                android:background="#FFCCCCCC" />
+
+            <ImageView
+                android:id="@+id/ivCancel"
+                android:layout_width="@dimen/navigatorSize"
+                android:layout_height="@dimen/navigatorSize"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/icon_delete_click"
+                android:contentDescription="@string/app_name" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

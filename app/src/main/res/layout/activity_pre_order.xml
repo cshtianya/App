@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pressedColor" >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar"
+        app:title="@string/order_list_titleName"
+        app:titleTextAppearance="@style/appTitleStyle"
+        app:navigationIcon="@mipmap/ic_back"
+        />
+
+    <ExpandableListView
+        android:id="@+id/expListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:groupIndicator="@null"
+        android:dividerHeight="0dp"
+        android:divider="@null"
+        android:childDivider="@null"
+        android:cacheColorHint="@android:color/transparent"
+        android:layout_marginBottom="1dp"
+        android:scrollbarThumbVertical="@drawable/list_scrollbar" />
+
+
+    <include
+        android:layout_height="@dimen/actionbarSize"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        layout="@layout/order_footer_view" />
+
+</RelativeLayout>

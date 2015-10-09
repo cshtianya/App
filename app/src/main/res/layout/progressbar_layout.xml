@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="64dp"
+    android:layout_height="64dp"
+    android:gravity="center"
+    android:background="@drawable/circular_transparent_bg"
+    >
+
+    <com.app.views.custom_views.ProgressBarCircularIndeterminate
+        android:id="@+id/progressBarCircularIndetermininate"
+        android:layout_width="@dimen/primaryIconSize"
+        android:layout_height="@dimen/primaryIconSize"
+        android:layout_centerInParent="true"
+        android:background="@color/primaryColor" />
+
+</RelativeLayout>

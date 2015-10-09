@@ -1,0 +1,32 @@
+<resources>
+
+    <style name="AppTheme" parent="AppTheme.Base"/>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <!--Window color-->
+        <item name="android:windowBackground">@color/primaryColor</item>
+        <!-- Actionbar color -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <!--Status bar color -->
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <!--悬浮按钮，对应EditText编辑时、RadioButton选中、CheckBox等选中时的颜色-->
+        <item name="colorAccent">@color/accent</item>
+        <!-- Actionbar text color -->
+        <item name="android:textColorPrimary">@color/textColor</item>
+
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+
+    </style>
+
+
+
+</resources>

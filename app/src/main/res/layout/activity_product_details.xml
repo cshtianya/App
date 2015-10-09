@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/navigatorSize"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/banner_height"
+                    fresco:actualImageScaleType="fitXY"
+                    fresco:placeholderImage="@mipmap/large_loading_img"
+                    fresco:placeholderImageScaleType="fitCenter" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin"
+                    >
+
+                    <com.app.views.custom_views.UITextView
+                        android:id="@+id/txtProductIntro"
+                        style="@style/textPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin"
+                        android:text=""
+                        android:textColor="@color/textSecondary" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtProductIntro"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/spacing"
+                        android:paddingRight="@dimen/spacing">
+
+                        <com.app.views.custom_views.UITextView
+                            android:id="@+id/txtProductPrice"
+                            style="@style/textPrimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/promptColor"
+                            android:textSize="@dimen/text_size_title" />
+
+                        <com.app.views.custom_views.UITextView
+                            android:id="@+id/txtCostPrice"
+                            style="@style/textSecondary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:textColor="@color/textSecondary" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing"
+                    android:layout_marginRight="@dimen/spacing"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_marginBottom="@dimen/margin"
+                    android:singleLine="true"
+                    android:visibility="gone"
+                    android:textColor="@color/promptColor"
+                    android:gravity="center"
+                    />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@android:color/white"
+                    android:layout_height="@dimen/navigatorSize">
+
+                    <RadioButton
+                        android:id="@+id/radoProductIntro"
+                        style="@style/navigatorStyle"
+                        android:background="@android:color/transparent"
+                        android:layout_width="fill_parent"
+                        android:checked="true"
+                        android:textSize="@dimen/text_size_title"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/tab_color_red"
+                        android:layout_weight="1"
+                        android:text="@string/product_intro" />
+
+                    <RadioButton
+                        android:id="@+id/radoProductComments"
+                        style="@style/navigatorStyle"
+                        android:background="@android:color/transparent"
+                        android:textSize="@dimen/text_size_title"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/tab_color_red"
+                        android:layout_weight="1"
+                        android:text="@string/product_comments" />
+
+                </RadioGroup>
+
+                <View style="@style/line"
+                    android:background="@color/promptColor"
+                    />
+
+
+                <FrameLayout
+                    android:id="@+id/managerFrame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+        <android.support.v7.widget.Toolbar
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/layBottom"
+            app:navigationIcon="@null"
+            app:contentInsetStart="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigatorSize"
+            android:background="@android:color/transparent"
+            android:layout_alignParentBottom="true"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/txtCollect"
+                    android:layout_width="0dp"
+                    android:background="@drawable/xml_view_selecter"
+                    android:clickable="true"
+                    android:paddingTop="3dp"
+                    android:layout_weight="0.2"
+                    android:drawableTop="@mipmap/ic_uncollect"
+                    android:layout_height="match_parent"
+                    style="@style/textSecondary"
+                    android:gravity="center"
+                    android:text="@string/sg_db_add_collect"
+                    />
+
+                <View
+                    android:background="@color/divider"
+                    android:layout_width="0.5dp"
+                    android:layout_height="@dimen/navigatorSize"/>
+
+                <TextView
+                    android:id="@+id/txtShare"
+                    android:background="@drawable/xml_view_selecter"
+                    android:clickable="true"
+                    android:drawableTop="@mipmap/ic_share_black_24dp"
+                    android:layout_width="0dp"
+                    android:paddingTop="3dp"
+                    android:visibility="gone"
+                    android:layout_weight="0.15"
+                    android:layout_height="match_parent"
+                    style="@style/textSecondary"
+                    android:gravity="center"
+                    android:text="@string/sg_db_add_share"
+                    />
+
+                <View
+                    android:background="@color/divider"
+                    android:layout_width="0.5dp"
+                    android:visibility="gone"
+                    android:layout_height="@dimen/navigatorSize"/>
+
+                <TextView
+                    android:id="@+id/txtAddWishList"
+                    style="@style/textPrimary"
+                    android:background="@drawable/xml_view_selecter"
+                    android:clickable="true"
+                    android:layout_width="0dp"
+                    android:paddingTop="3dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/sg_db_add_cart"
+                    />
+
+                <TextView
+                    android:id="@+id/txtBuyNow"
+                    style="@style/textPrimary"
+                    android:clickable="true"
+                    android:background="@drawable/xml_button"
+                    android:textColor="@color/textColor"
+                    android:layout_width="0dp"
+                    android:paddingTop="3dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/sg_db_buy_now"
+                    />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <View
+            android:layout_above="@id/layBottom"
+            style="@style/line"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar"
+        app:title="@string/product_detial_name"
+        app:subtitleTextAppearance="@style/appTitleStyle"
+        app:navigationIcon="@mipmap/ic_back"
+        android:background="@mipmap/black_bg"
+        />
+
+</FrameLayout>

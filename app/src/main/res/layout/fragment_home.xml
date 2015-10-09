@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pressedColor"
+    >
+
+    <com.app.views.custom_views.ProgressBarIndeterminate
+        android:id="@+id/progressBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@color/primaryColor"
+        android:layout_alignParentBottom="true"
+         />
+
+    <com.github.ksoichiro.android.observablescrollview.ObservableRecyclerView
+        android:layout_above="@id/progressBar"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rlayNavItem"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navigatorSize"
+        android:background="@drawable/translucence_bg"
+        android:clickable="true" >
+
+        <ImageView
+            android:id="@+id/ivDetial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="@dimen/margin"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/ic_go" />
+        
+         <TextView
+            android:id="@+id/txtNavSubPrice"
+            style="@style/textPrimary"
+             android:textColor="@color/promptColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_toLeftOf="@id/ivDetial"
+            android:gravity="center_vertical"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/txtNavName"
+            style="@style/appTitleStyle"
+            android:textColor="@color/textPrimary"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_toLeftOf="@id/txtNavSubPrice"
+            android:gravity="center_vertical"
+            android:text="" />
+    </RelativeLayout>
+
+</RelativeLayout>

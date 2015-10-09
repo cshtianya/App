@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/actionbarSize"
+    android:background="@android:color/white" >
+
+    <Button
+        android:id="@+id/btnBuyNow"
+        style="@style/appTitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/xml_button"
+        android:layout_gravity="right"
+        android:paddingLeft="@dimen/spacing"
+        android:paddingRight="@dimen/spacing"
+        android:text="@string/order_submit"
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/appTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/cart_cart_total_price"
+            android:textColor="@color/textPrimary"
+            />
+
+        <TextView
+            android:id="@+id/txtTotalPrice"
+            style="@style/appTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="￥0.0"
+            android:textColor="@color/promptColor"
+            />
+    </LinearLayout>
+</android.support.v7.widget.Toolbar>

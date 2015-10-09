@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/faceSize"
+    android:paddingLeft="@dimen/spacing">
+
+    <View
+        style="@style/line"
+        android:layout_alignParentBottom="true" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/draweeView"
+        android:layout_width="@dimen/actionbarSize"
+        android:layout_height="@dimen/actionbarSize"
+        android:layout_centerVertical="true"
+        fresco:actualImageScaleType="fitXY"
+        fresco:placeholderImage="@mipmap/large_loading_img"
+        fresco:placeholderImageScaleType="center" />
+
+
+
+    <LinearLayout
+        android:id="@+id/layRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtItemDisPrice"
+            style="@style/textPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="@dimen/text_size_title" />
+
+        <TextView
+            android:id="@+id/txtItemPrice"
+            style="@style/textSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:singleLine="true"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/ivCancelCollect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="right"
+            android:src="@mipmap/ic_menu_delete" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toLeftOf="@id/layRight"
+        android:layout_toRightOf="@id/draweeView"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtItemName"
+            style="@style/textPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:layout_marginRight="20dp"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/txtItemCollecLike"
+            style="@style/textSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:singleLine="true" />
+
+    </LinearLayout>
+
+</RelativeLayout>

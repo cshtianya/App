@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.app.views.custom_views.UITabView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/navigatorSize"
+    android:orientation="horizontal"
+
+    >
+
+    <!-- 首页 -->
+
+    <RadioButton
+        android:id="@+id/radoHome"
+        style="@style/navigatorStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:checked="true"
+        android:drawableTop="@drawable/bar_home_icon"
+        android:background="@color/disableColor"
+        android:text="@string/toolbar_home" />
+    <!-- 分类 -->
+
+    <!--<RadioButton-->
+        <!--android:id="@+id/radoCategory"-->
+        <!--style="@style/navigatorStyle"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:drawableTop="@drawable/bar_category_icon"-->
+        <!--android:text="@string/toolbar_category" />-->
+    <!-- 购物车 -->
+
+    <RadioButton
+        android:id="@+id/radoCart"
+        style="@style/navigatorStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/bar_cart_icon"
+        android:background="@color/disableColor"
+        android:text="@string/toolbar_cart" />
+
+    <!-- 账户 -->
+
+    <RadioButton
+        android:id="@+id/radoAccount"
+        style="@style/navigatorStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/bar_user_icon"
+        android:background="@color/disableColor"
+        android:text="@string/toolbar_account" />
+    <!-- 更多 -->
+
+    <!--<RadioButton-->
+        <!--android:id="@+id/radoMore"-->
+        <!--style="@style/navigatorStyle"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:drawableTop="@drawable/bar_more_icon"-->
+        <!--android:text="@string/toolbar_more" />-->
+
+</com.app.views.custom_views.UITabView>

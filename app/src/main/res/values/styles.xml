@@ -1,0 +1,141 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <!--Window color-->
+        <item name="android:windowBackground">@color/themeBg</item>
+        <!-- Actionbar color -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <!--Status bar color -->
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <!--悬浮按钮，对应EditText编辑时、RadioButton选中、CheckBox等选中时的颜色-->
+        <item name="colorAccent">@color/accent</item>
+        <!-- Actionbar text color -->
+        <item name="android:textColorPrimary">@color/textColor</item>
+    </style>
+
+
+
+    <style name="Toolbar" parent="AppTheme">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/actionbarSize</item>
+        <item name="titleTextAppearance">@style/appTitleStyle</item>
+        <!--<item name="android:clipToPadding">false</item>-->
+        <!--<item name="android:fitsSystemWindows">true</item>-->
+    </style>
+
+    <style name="actionbarStyle">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/actionbarSize</item>
+    </style>
+
+    <style name="UITagGroupStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="atg_borderColor">@android:color/transparent</item>
+        <item name="atg_textColor">@color/textPrimary</item>
+        <item name="atg_textDisableColor">@color/textDisableColor</item>
+        <item name="atg_textSize">@dimen/text_size_secondary</item>
+        <item name="atg_backgroundColor">@android:color/transparent</item>
+        <item name="atg_backgroundDisableColor">@color/disableColor</item>
+        <item name="atg_checkedBorderColor">@color/primaryColor</item>
+        <item name="atg_checkedTextColor">@color/textColor</item>
+        <item name="atg_checkedBackgroundColor">@color/primaryColor</item>
+        <item name="atg_pressedBackgroundColor">@color/primaryDark</item>
+        <item name="atg_borderStrokeWidth">0.5dp</item>
+        <item name="atg_minWidth">@dimen/fabSmallSize</item>
+        <item name="atg_minHight">@dimen/fabSmallSize</item>
+        <item name="atg_horizontalSpacing">@dimen/spacing</item>
+        <item name="atg_verticalSpacing">@dimen/spacing</item>
+        <item name="atg_horizontalPadding">5dp</item>
+        <item name="atg_verticalPadding">5dp</item>
+    </style>
+
+
+    <style name="navigatorStyle" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/tab_color_red</item>
+        <item name="android:textSize">@dimen/text_size_secondary</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:background">@android:color/black</item>
+    </style>
+
+    <!--
+        Base application Dialog style
+    -->
+    <style name="dialogStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowFrame">@null</item><!--	去除边框 -->
+        <item name="android:windowNoTitle">true</item><!-- 去除标题-->
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item><!-- 背景模糊-->
+        <item name="android:windowIsTranslucent">true</item><!-- 半透明-->
+        <item name="android:windowBackground">@color/themeBg</item><!--除去背景色-->
+    </style>
+
+    <style name="textBaseStyle">
+        <item name="android:lineSpacingMultiplier">1.0</item>
+        <item name="android:textScaleX">1.0</item>
+    </style>
+
+    <!--
+        Base application titlebar style
+    -->
+    <style name="appTitleStyle">
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowColor">@color/divider</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!--
+        Base application EditText style
+    -->
+    <style name="appEditTextStyle">
+        <item name="android:textSize">@dimen/text_size_primary</item>
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:paddingLeft">@dimen/margin</item>
+        <item name="android:paddingRight">@dimen/margin</item>
+        <item name="android:textColorHint">@color/hintColor</item>
+    </style>
+
+    <style name="buttonStyle" parent="@style/textBaseStyle">
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/divider</item>
+        <item name="android:layout_height">@dimen/line</item>
+    </style>
+
+    <style name="textPrimary" parent="@style/textBaseStyle">
+        <item name="android:textSize">@dimen/text_size_primary</item>
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textColorHint">@color/textSecondary</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="textSecondary" parent="@style/textBaseStyle">
+        <item name="android:textSize">@dimen/text_size_secondary</item>
+        <item name="android:textColor">@color/textSecondary</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+
+</resources>
