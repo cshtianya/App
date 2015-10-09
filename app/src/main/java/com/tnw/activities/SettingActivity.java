@@ -10,7 +10,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
- * 设置界面
+ * 设置界面 再一次修改
  * Created by CSH on 2015/7/14 0014.
  */
 public class SettingActivity extends BaseActivity implements View.OnClickListener{
